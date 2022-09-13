@@ -1,4 +1,4 @@
-module diferenca(S, A, B);
+module diferenca(S, sinal, A, B);
 	input [3:0] A;
 	input [3:0] B;
 	
@@ -19,5 +19,7 @@ module diferenca(S, A, B);
 	xor xor2(resXor[2], resSub[2], menor);
 	xor xor3(resXor[3], resSub[3], menor);
 	
-	adder(S, resXor, menor, 0);
+  // define o sinal da operacao
+	
+	assign sinal = menor; // 1 = negativo
 endmodule 
