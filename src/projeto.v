@@ -6,6 +6,9 @@ module projeto(senha, tentativa, ledG, ledR, diferenca);
 	output ledG, ledR;
 	output [3:0]diferenca; // 000 - 111
 	
-	diferenca diff0 (diferenca, senha, tentativa);
+	wire sinal;
+	
+	// sinal: 1 = negativo;
+	diferenca diff0 (diferenca, sinal, senha, tentativa);
 	
 endmodule 
