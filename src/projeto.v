@@ -30,8 +30,8 @@ module projeto(senha, tentativa, led0, led1, led2, diferenca);
 	and and2 (bit2, diferenca[2], 1); // verifica se o 2 bit é 1
 	
 	// inverte o valor do bit3 e bit2
-	not(notBit3, bit3);
-	not(notBit2, bit2);
+	not (notBit3, bit3);
+	not (notBit2, bit2);
 	
 	and and3 (nb3_and_nb2, notBit3, notBit2); // se algum dos dois for positivo, a diferença entre as duas senhas excede 3 unidades
 	and and4 (led1, nb3_and_nb2, not_igual); // se a senha estiver correta, led1 nao eh acionado
