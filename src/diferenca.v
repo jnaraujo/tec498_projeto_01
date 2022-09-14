@@ -24,6 +24,5 @@ module diferenca(S, sinal, A, B);
 	adder(S, resXor, menor, 0); // se A for menor que B, então soma 1 bit ao resultado
 
   // define o sinal da operacao
-	
-	assign sinal = menor; // 1 = negativo
+  and and0(sinal, menor, 1); // 1 = negativo
 endmodule 
