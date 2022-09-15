@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01 --vector_source="Z:/Programming/faculdade/tec498_projeto_01/src/projeto.vwf" --testbench_file="Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/projeto.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01 --vector_source="Z:/Programming/faculdade/tec498_projeto_01/src/displayNegativo.vwf" --testbench_file="Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/displayNegativo.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,10 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Sep 15 10:55:04 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01 --vector_source=Z:/Programming/faculdade/tec498_projeto_01/src/projeto.vwf --testbench_file=Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/projeto.vwf.vt
+    Info: Processing started: Thu Sep 15 13:06:42 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01 --vector_source=Z:/Programming/faculdade/tec498_projeto_01/src/displayNegativo.vwf --testbench_file=Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/displayNegativo.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Warning (146050): Vector source file contains syntax error in  Z:/Programming/faculdade/tec498_projeto_01/src/projeto.vwf, line 727, comment/time bar value cannot be set beyond simulation end time 80000 ps File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.vwf Line: 727
 
 Completed successfully. 
 
@@ -56,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Sep 15 10:55:05 2022
+    Info: Processing started: Thu Sep 15 13:06:43 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/ tec498_projeto_01 -c tec498_projeto_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file tec498_projeto_01.vo in folder "Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4618 megabytes
-    Info: Processing ended: Thu Sep 15 10:55:06 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Sep 15 13:06:43 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -85,52 +84,52 @@ Reading pref.tcl
 # do tec498_projeto_01.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
+
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:55:07 on Sep 15,2022
+# Start time: 13:06:45 on Sep 15,2022
 # vlog -work work tec498_projeto_01.vo 
-
-# -- Compiling module projeto
+# -- Compiling module display
 # 
 # Top level modules:
-# 	projeto
-# End time: 10:55:07 on Sep 15,2022, Elapsed time: 0:00:00
+# 	display
+# End time: 13:06:45 on Sep 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:55:07 on Sep 15,2022
-# vlog -work work projeto.vwf.vt 
-
-# -- Compiling module projeto_vlg_vec_tst
+# Start time: 13:06:45 on Sep 15,2022
+# vlog -work work displayNegativo.vwf.vt 
+# -- Compiling module display_vlg_vec_tst
 # 
 # Top level modules:
-# 	projeto_vlg_vec_tst
-# End time: 10:55:07 on Sep 15,2022, Elapsed time: 0:00:00
+# 	display_vlg_vec_tst
+# End time: 13:06:45 on Sep 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.projeto_vlg_vec_tst 
-# Start time: 10:55:08 on Sep 15,2022
-# Loading work.projeto_vlg_vec_tst
-# Loading work.projeto
+# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.display_vlg_vec_tst 
+# Start time: 13:06:45 on Sep 15,2022
+# Loading work.display_vlg_vec_tst
+# Loading work.display
 # Loading maxii_ver.maxii_io
 # Loading maxii_ver.maxii_lcell
 # Loading maxii_ver.maxii_asynch_lcell
 # Loading maxii_ver.maxii_lcell_register
 # after#25
-# ** Note: $finish    : projeto.vwf.vt(53)
-#    Time: 80 ns  Iteration: 0  Instance: /projeto_vlg_vec_tst
-# End time: 10:55:08 on Sep 15,2022, Elapsed time: 0:00:00
+# ** Note: $finish    : displayNegativo.vwf.vt(63)
+#    Time: 80 ns  Iteration: 0  Instance: /display_vlg_vec_tst
+# End time: 13:06:45 on Sep 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading Z:/Programming/faculdade/tec498_projeto_01/src/projeto.vwf...
+Reading Z:/Programming/faculdade/tec498_projeto_01/src/displayNegativo.vwf...
 
 Reading Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/tec498_projeto_01.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/tec498_projeto_01_20220915105508.sim.vwf
+Writing the resulting VWF to Z:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim/tec498_projeto_01_20220915130645.sim.vwf
 
 Finished VCD to VWF conversion.
 
