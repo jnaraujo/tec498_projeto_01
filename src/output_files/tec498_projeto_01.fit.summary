@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Sep 14 20:59:37 2022
+Fitter Status : Successful - Wed Sep 14 21:35:04 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : tec498_projeto_01
-Top-level Entity Name : subtrator
+Top-level Entity Name : projeto
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 7 / 240 ( 3 % )
-Total pins : 13 / 80 ( 16 % )
+Total logic elements : 6 / 240 ( 3 % )
+Total pins : 15 / 80 ( 19 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

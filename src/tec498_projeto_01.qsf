@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY subtrator
+set_global_assignment -name TOP_LEVEL_ENTITY projeto
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:39:57  SEPTEMBER 14, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -57,3 +57,4 @@ set_global_assignment -name VERILOG_FILE adder.v
 set_global_assignment -name VERILOG_FILE adder_1bit.v
 set_global_assignment -name VERILOG_FILE subtrator.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE subtrator.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE adder.vwf

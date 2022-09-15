@@ -1,5 +1,5 @@
 module subtrator(S, Bout, A, B);
-	// Define a saída do circuito
+	// Define as saídas do circuito
 	output [3:0] S;
 	output Bout;
 	

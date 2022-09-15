@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tec498_projeto_01
-Wed Sep 14 20:59:35 2022
+Wed Sep 14 21:35:02 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,8 +14,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "adder:adder0"
- 10. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "subtrator:sub0|adder:adder0"
+ 10. Port Connectivity Checks: "subtrator:sub0"
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Sep 14 20:59:35 2022       ;
+; Analysis & Synthesis Status ; Successful - Wed Sep 14 21:35:02 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; tec498_projeto_01                           ;
-; Top-level Entity Name       ; subtrator                                   ;
+; Top-level Entity Name       ; projeto                                     ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 7                                           ;
-; Total pins                  ; 13                                          ;
+; Total logic elements        ; 6                                           ;
+; Total pins                  ; 15                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -60,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100C5       ;                    ;
-; Top-level entity name                                            ; subtrator          ; tec498_projeto_01  ;
+; Top-level entity name                                            ; projeto            ; tec498_projeto_01  ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -146,58 +147,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; projeto.v                        ; yes             ; User Verilog HDL File  ; Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v    ;         ;
 ; adder.v                          ; yes             ; User Verilog HDL File  ; Z:/Programming/faculdade/tec498_projeto_01/src/adder.v      ;         ;
 ; adder_1bit.v                     ; yes             ; User Verilog HDL File  ; Z:/Programming/faculdade/tec498_projeto_01/src/adder_1bit.v ;         ;
 ; subtrator.v                      ; yes             ; User Verilog HDL File  ; Z:/Programming/faculdade/tec498_projeto_01/src/subtrator.v  ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 7     ;
-;     -- Combinational with no register       ; 7     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2     ;
-;     -- 3 input functions                    ; 4     ;
-;     -- 2 input functions                    ; 1     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 7     ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 13    ;
-; Maximum fan-out node                        ; A[0]  ;
-; Maximum fan-out                             ; 3     ;
-; Total fan-out                               ; 27    ;
-; Average fan-out                             ; 1.35  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 6        ;
+;     -- Combinational with no register       ; 6        ;
+;     -- Register only                        ; 0        ;
+;     -- Combinational with a register        ; 0        ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 3        ;
+;     -- 3 input functions                    ; 1        ;
+;     -- 2 input functions                    ; 2        ;
+;     -- 1 input functions                    ; 0        ;
+;     -- 0 input functions                    ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 6        ;
+;     -- arithmetic mode                      ; 0        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+; I/O pins                                    ; 15       ;
+; Maximum fan-out node                        ; senha[0] ;
+; Maximum fan-out                             ; 3        ;
+; Total fan-out                               ; 23       ;
+; Average fan-out                             ; 1.10     ;
++---------------------------------------------+----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                       ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------+-------------+--------------+
-; |subtrator                 ; 7 (0)       ; 0            ; 0          ; 13   ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |subtrator                                ; subtrator   ; work         ;
-;    |adder:adder0|          ; 7 (0)       ; 0            ; 0          ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |subtrator|adder:adder0                   ; adder       ; work         ;
-;       |adder_1bit:adder0|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |subtrator|adder:adder0|adder_1bit:adder0 ; adder_1bit  ; work         ;
-;       |adder_1bit:adder1|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |subtrator|adder:adder0|adder_1bit:adder1 ; adder_1bit  ; work         ;
-;       |adder_1bit:adder2|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |subtrator|adder:adder0|adder_1bit:adder2 ; adder_1bit  ; work         ;
-;       |adder_1bit:adder3|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |subtrator|adder:adder0|adder_1bit:adder3 ; adder_1bit  ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
++------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+-------------+--------------+
+; |projeto                     ; 6 (0)       ; 0            ; 0          ; 15   ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto                                               ; projeto     ; work         ;
+;    |subtrator:sub0|          ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto|subtrator:sub0                                ; subtrator   ; work         ;
+;       |adder:adder0|         ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto|subtrator:sub0|adder:adder0                   ; adder       ; work         ;
+;          |adder_1bit:adder0| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto|subtrator:sub0|adder:adder0|adder_1bit:adder0 ; adder_1bit  ; work         ;
+;          |adder_1bit:adder1| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto|subtrator:sub0|adder:adder0|adder_1bit:adder1 ; adder_1bit  ; work         ;
+;          |adder_1bit:adder2| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto|subtrator:sub0|adder:adder0|adder_1bit:adder2 ; adder_1bit  ; work         ;
+;          |adder_1bit:adder3| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |projeto|subtrator:sub0|adder:adder0|adder_1bit:adder3 ; adder_1bit  ; work         ;
++------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,7 +220,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "adder:adder0"                                                                                                                                                                        ;
+; Port Connectivity Checks: "subtrator:sub0|adder:adder0"                                                                                                                                                         ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -226,13 +229,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "subtrator:sub0"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Bout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 14 20:59:25 2022
+    Info: Processing started: Wed Sep 14 21:34:52 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -244,18 +256,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder_1
     Info (12023): Found entity 1: adder_1bit File: Z:/Programming/faculdade/tec498_projeto_01/src/adder_1bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file subtrator.v
     Info (12023): Found entity 1: subtrator File: Z:/Programming/faculdade/tec498_projeto_01/src/subtrator.v Line: 1
-Info (12127): Elaborating entity "subtrator" for the top level hierarchy
-Info (12128): Elaborating entity "adder" for hierarchy "adder:adder0" File: Z:/Programming/faculdade/tec498_projeto_01/src/subtrator.v Line: 21
-Info (12128): Elaborating entity "adder_1bit" for hierarchy "adder:adder0|adder_1bit:adder0" File: Z:/Programming/faculdade/tec498_projeto_01/src/adder.v Line: 13
+Info (12127): Elaborating entity "projeto" for the top level hierarchy
+Warning (10034): Output port "led0" at projeto.v(11) has no driver File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 11
+Warning (10034): Output port "led1" at projeto.v(11) has no driver File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 11
+Warning (10034): Output port "led2" at projeto.v(11) has no driver File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 11
+Info (12128): Elaborating entity "subtrator" for hierarchy "subtrator:sub0" File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 22
+Info (12128): Elaborating entity "adder" for hierarchy "subtrator:sub0|adder:adder0" File: Z:/Programming/faculdade/tec498_projeto_01/src/subtrator.v Line: 21
+Info (12128): Elaborating entity "adder_1bit" for hierarchy "subtrator:sub0|adder:adder0|adder_1bit:adder0" File: Z:/Programming/faculdade/tec498_projeto_01/src/adder.v Line: 13
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led0" is stuck at GND File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 11
+    Warning (13410): Pin "led1" is stuck at GND File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 11
+    Warning (13410): Pin "led2" is stuck at GND File: Z:/Programming/faculdade/tec498_projeto_01/src/projeto.v Line: 11
+Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 6 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Wed Sep 14 20:59:35 2022
+    Info: Processing ended: Wed Sep 14 21:35:02 2022
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:24
 
 

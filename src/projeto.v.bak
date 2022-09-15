@@ -3,24 +3,24 @@ module projeto(senha, tentativa, led0, led1, led2, diferenca);
 	// led1: quando a senha é maior ou menor em ate 3 unidades
 	// led2: se a senha estiver errada
 
-	// Define as entradas do circuito
 	input [3:0] senha; // a senha do cofre
 	input [3:0] tentativa; // a senha do usuário para tentar abrir o cofre
 	
-	// Define as saídas do circuito
 	output led0, led1, led2;
 	output [3:0] diferenca;
 	
-	// Define os fios
-	wire subBOut; // sinal da operação; 1 == negativo
+	wire sinal;
+	wire maior, menor, igual;
+	wire not_igual;
+	wire bit3, bit2;
+	wire notBit3, notBit2;
+	wire nb3_and_nb2;
 	
-	subtrator sub0 (
-						.S(diferenca),
-						.Bout(subBOut),
-						.A(senha),
-						.B(tentativa)
-	);
+	not not0(not_igual, igual);
 	
+	// sinal: 1 = negativo;
+	diferenca diff0 (diferenca, sinal, senha, tentativa);
 	
+	and and0 (led0, igual, 1); // se a senha for correta
 	
 endmodule 

@@ -3,7 +3,7 @@ $comment
 		vcd file tec498_projeto_01.msim.vcd -direction
 $end
 $date
-	Wed Sep 14 20:59:50 2022
+	Wed Sep 14 21:27:50 2022
 $end
 $version
 	ModelSim Version 2020.1
@@ -12,37 +12,40 @@ $timescale
 	1ps
 $end
 
-$scope module subtrator_vlg_vec_tst $end
+$scope module adder_vlg_vec_tst $end
 $var reg 4 ! A [3:0] $end
 $var reg 4 " B [3:0] $end
-$var wire 1 # Bout $end
-$var wire 1 $ S [3] $end
-$var wire 1 % S [2] $end
-$var wire 1 & S [1] $end
-$var wire 1 ' S [0] $end
+$var reg 1 # Cin $end
+$var wire 1 $ Cout $end
+$var wire 1 % S [3] $end
+$var wire 1 & S [2] $end
+$var wire 1 ' S [1] $end
+$var wire 1 ( S [0] $end
 
 $scope module i1 $end
-$var wire 1 ( gnd $end
-$var wire 1 ) vcc $end
-$var wire 1 * unknown $end
-$var tri1 1 + devclrn $end
-$var tri1 1 , devpor $end
-$var tri1 1 - devoe $end
-$var wire 1 . adder0|adder0|xor0~combout $end
-$var wire 1 / adder0|adder1|xor1~combout $end
-$var wire 1 0 adder0|adder1|or0~combout $end
-$var wire 1 1 adder0|adder2|xor1~combout $end
-$var wire 1 2 adder0|adder2|or0~combout $end
-$var wire 1 3 adder0|adder3|xor1~combout $end
-$var wire 1 4 adder0|adder3|or0~combout $end
-$var wire 1 5 A~combout [3] $end
-$var wire 1 6 A~combout [2] $end
-$var wire 1 7 A~combout [1] $end
-$var wire 1 8 A~combout [0] $end
-$var wire 1 9 B~combout [3] $end
-$var wire 1 : B~combout [2] $end
-$var wire 1 ; B~combout [1] $end
-$var wire 1 < B~combout [0] $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / Cin~combout $end
+$var wire 1 0 adder0|xor1~0_combout $end
+$var wire 1 1 adder0|or0~0_combout $end
+$var wire 1 2 adder1|xor1~combout $end
+$var wire 1 3 adder1|or0~0_combout $end
+$var wire 1 4 adder2|xor1~combout $end
+$var wire 1 5 adder2|or0~0_combout $end
+$var wire 1 6 adder3|xor1~combout $end
+$var wire 1 7 adder3|or0~0_combout $end
+$var wire 1 8 A~combout [3] $end
+$var wire 1 9 A~combout [2] $end
+$var wire 1 : A~combout [1] $end
+$var wire 1 ; A~combout [0] $end
+$var wire 1 < B~combout [3] $end
+$var wire 1 = B~combout [2] $end
+$var wire 1 > B~combout [1] $end
+$var wire 1 ? B~combout [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -51,76 +54,70 @@ $dumpvars
 b0 !
 b0 "
 0#
+0$
+0(
 0'
 0&
 0%
-0$
-0(
-1)
-x*
-1+
+0)
+1*
+x+
 1,
 1-
-0.
-1/
-10
-11
-12
-13
-14
-08
-07
-06
+1.
+0/
+00
+01
+02
+03
+04
 05
-0<
+06
+07
 0;
 0:
 09
+08
+0?
+0>
+0=
+0<
 $end
 #5000
 b1 !
 b1000 "
-19
-18
-04
-03
-1.
-1'
-1$
-1#
+1<
+1;
+16
+10
+1%
+1(
 #10000
 b11 !
 b1100 "
 b10 !
 b100 "
+1=
+0<
+0;
 1:
-09
-08
-17
-02
-01
 14
-13
-0/
-0.
-04
-03
-0'
+06
+00
+12
 1&
-0$
-0#
-1%
-1$
-1#
+0%
+0(
+1'
 #15000
 b11 !
 b1100 "
-19
-18
-13
-1.
-1'
-0$
+1<
+1;
+16
+10
+1%
+1(
 #20000
 b111 !
 b1110 "
@@ -128,78 +125,59 @@ b101 !
 b1010 "
 b100 !
 b10 "
-1;
+1>
+0=
+0<
+0;
 0:
-09
-08
-07
-16
+19
+06
 00
-12
-03
-0.
-11
-14
-13
-0'
-1$
-0$
-0#
 0%
+0(
 #25000
 b101 !
 b1010 "
-19
-18
-04
-03
-1.
-1'
-1$
-1#
+1<
+1;
+16
+10
+1%
+1(
 #30000
 b111 !
 b1110 "
 b110 !
 b110 "
+1=
+0<
+0;
 1:
-09
-08
-17
-02
-01
-14
-13
-10
-1/
-0.
+15
 04
-03
-12
-11
-0'
-0&
-0$
-0#
-1%
-14
+06
+00
 13
+02
+16
+14
+0&
 0%
-1$
-1#
-0$
-0#
+0(
+0'
+1%
+1&
 #35000
 b111 !
 b1110 "
-19
-18
-04
-03
-1.
-1'
+1<
+1;
+17
+06
+10
 1$
-1#
+0%
+1(
 #40000
 b1111 !
 b1111 "
@@ -209,76 +187,94 @@ b1001 !
 b1001 "
 b1000 !
 b1 "
-1<
+1?
+0>
+0=
+0<
 0;
 0:
 09
-08
+18
+03
+05
+04
 07
-06
-15
-00
-0/
-14
-02
-01
-0#
-1&
-13
-1%
+16
+0&
 0$
+1%
 #45000
 b1001 !
 b1001 "
-19
-18
-04
-03
-10
-1/
-0.
-12
+1<
+1;
+17
+06
 11
-0'
-0&
+00
+12
 1$
-1#
-14
-13
 0%
-0$
-0#
+0(
+1'
 #50000
 b1011 !
 b1101 "
 b1010 !
 b101 "
+1=
+0<
+0;
 1:
-09
-08
-17
-02
+14
+07
+16
 01
-03
-1.
+10
 13
-1'
-1$
-1%
+02
+03
+12
+15
+04
+1&
 0$
+1%
+1(
+0'
+05
+14
+17
+06
+1'
+0&
+07
+16
+1&
+1$
+0%
+0$
+1%
 #55000
 b1011 !
 b1101 "
-19
-18
-04
-03
-0/
-0.
-0'
-1&
+1<
+1;
+17
+06
+11
+00
+13
+02
 1$
-1#
+0%
+0(
+15
+04
+0'
+16
+0&
+1%
 #60000
 b1111 !
 b1111 "
@@ -286,74 +282,77 @@ b1101 !
 b1011 "
 b1100 !
 b11 "
-1;
+1>
+0=
+0<
+0;
 0:
-09
-08
+19
+06
+01
+10
+03
+12
+0%
+1(
+05
+14
+1'
 07
 16
-00
-1/
-12
-14
-13
-1.
-11
-03
-1'
+1&
 0$
-0#
-0&
-1$
-0%
+1%
 #65000
 b1101 !
 b1011 "
-19
-18
+1<
+1;
+17
+06
+11
+00
 13
-0/
-0.
+02
+1$
+0%
+0(
+15
+04
 0'
-1&
-0$
+16
+0&
+1%
 #70000
 b1111 !
 b1111 "
 b1110 !
 b111 "
+1=
+0<
+0;
 1:
-09
-08
-17
-02
+14
+06
 01
-03
-1.
-13
+10
+12
+02
+1&
+0%
+1(
 1'
-1$
-1%
-0$
+0'
 #75000
 b1111 !
 b1111 "
-19
-18
-04
-03
-10
-1/
-0.
-12
+1<
+1;
+16
 11
-0'
-0&
-1$
-1#
-14
-13
-0%
-0$
-0#
+00
+12
+1%
+0(
+1'
 #80000
