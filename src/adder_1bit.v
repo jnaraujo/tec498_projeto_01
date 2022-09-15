@@ -1,0 +1,11 @@
+module adder_1bit( S, Cout, A, B, Cin);
+   input A, B, Cin;
+   output S, Cout;
+   wire T1, T2, T3;
+ 
+   xor xor0 (T1, A, B);
+   and and0(T2, A, B);
+   and and1(T3, T1, Cin);
+   or or0(Cout, T2, T3);
+   xor xor1 (S, T1, Cin);
+endmodule 

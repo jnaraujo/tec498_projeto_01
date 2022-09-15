@@ -1,0 +1,15 @@
+module subtrator(S, Bout, A, B);
+	// Define a saída do circuito
+	output [3:0] S;
+	output Bout;
+	
+	// Define as entradas do circuito
+	input  [3:0]A;
+	input  [3:0]B;
+	
+	// Define os fios
+	wire w0, w1, w2;
+	wire h0, h1, h2;
+	wire [3:0]notB;
+	
+endmodule 

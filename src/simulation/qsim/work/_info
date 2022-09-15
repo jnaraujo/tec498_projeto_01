@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dZ:/Programming/faculdade/tec498_projeto_01/src/simulation/qsim
+vsubtrator
+Z1 !s110 1663199989
+!i10b 1
+!s100 ;De`:Zh<?Bo6C_Vg<]EKI1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IS7=U8LMjKSG8Ae_PDJUIG3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1663199988
+8tec498_projeto_01.vo
+Ftec498_projeto_01.vo
+!i122 6
+L0 32 418
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1663199989.000000
+!s107 tec498_projeto_01.vo|
+!s90 -work|work|tec498_projeto_01.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vsubtrator_vlg_vec_tst
+R1
+!i10b 1
+!s100 Wc^?YNbIN_I[J;1=aYnne0
+R2
+ILdHGGNo=SL_D[kPf@_Nae3
+R3
+R0
+w1663199987
+8subtrator.vwf.vt
+Fsubtrator.vwf.vt
+!i122 7
+L0 30 78
+R4
+r1
+!s85 0
+31
+R5
+!s107 subtrator.vwf.vt|
+!s90 -work|work|subtrator.vwf.vt|
+!i113 1
+R6
+R7
