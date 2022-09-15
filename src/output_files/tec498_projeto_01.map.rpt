@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tec498_projeto_01
-Thu Sep 15 13:12:20 2022
+Thu Sep 15 13:47:03 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Sep 15 13:12:20 2022       ;
+; Analysis & Synthesis Status ; Successful - Thu Sep 15 13:47:03 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; tec498_projeto_01                           ;
 ; Top-level Entity Name       ; projeto                                     ;
@@ -248,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 15 13:12:08 2022
+    Info: Processing started: Thu Sep 15 13:46:53 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -286,8 +286,8 @@ Info (21057): Implemented 36 device resources after synthesis - the final resour
     Info (21061): Implemented 17 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Thu Sep 15 13:12:20 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Processing ended: Thu Sep 15 13:47:03 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
 
 

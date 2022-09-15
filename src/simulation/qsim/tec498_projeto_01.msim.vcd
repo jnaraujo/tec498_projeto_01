@@ -3,7 +3,7 @@ $comment
 		vcd file tec498_projeto_01.msim.vcd -direction
 $end
 $date
-	Thu Sep 15 13:15:01 2022
+	Thu Sep 15 13:48:06 2022
 $end
 $version
 	ModelSim Version 2020.1

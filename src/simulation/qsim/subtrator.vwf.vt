@@ -19,31 +19,29 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/14/2022 21:27:09"
+// Generated on "09/15/2022 13:37:30"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          adder
+// Verilog Test Bench (with test vectors) for design :                          subtrator
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module adder_vlg_vec_tst();
+module subtrator_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg [3:0] A;
 reg [3:0] B;
-reg Cin;
 // wires                                               
-wire Cout;
+wire Bout;
 wire [3:0] S;
 
 // assign statements (if any)                          
-adder i1 (
+subtrator i1 (
 // port map - connection between master ports and signals/registers   
 	.A(A),
 	.B(B),
-	.Cin(Cin),
-	.Cout(Cout),
+	.Bout(Bout),
 	.S(S)
 );
 initial 

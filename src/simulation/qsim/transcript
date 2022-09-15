@@ -1,25 +1,25 @@
 # do tec498_projeto_01.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:15:00 on Sep 15,2022
+# Start time: 13:48:05 on Sep 15,2022
 # vlog -work work tec498_projeto_01.vo 
 # -- Compiling module projeto
 # 
 # Top level modules:
 # 	projeto
-# End time: 13:15:00 on Sep 15,2022, Elapsed time: 0:00:00
+# End time: 13:48:05 on Sep 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:15:01 on Sep 15,2022
+# Start time: 13:48:05 on Sep 15,2022
 # vlog -work work projeto.vwf.vt 
 # -- Compiling module projeto_vlg_vec_tst
 # 
 # Top level modules:
 # 	projeto_vlg_vec_tst
-# End time: 13:15:01 on Sep 15,2022, Elapsed time: 0:00:00
+# End time: 13:48:05 on Sep 15,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.projeto_vlg_vec_tst 
-# Start time: 13:15:01 on Sep 15,2022
+# Start time: 13:48:05 on Sep 15,2022
 # Loading work.projeto_vlg_vec_tst
 # Loading work.projeto
 # Loading maxii_ver.maxii_io
@@ -29,5 +29,5 @@
 # after#25
 # ** Note: $finish    : projeto.vwf.vt(67)
 #    Time: 80 ns  Iteration: 0  Instance: /projeto_vlg_vec_tst
-# End time: 13:15:01 on Sep 15,2022, Elapsed time: 0:00:00
+# End time: 13:48:06 on Sep 15,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
