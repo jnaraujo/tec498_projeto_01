@@ -43,7 +43,7 @@ module comparador(diff, sinal, igual, ate3, errada);
 	
 	and and2(n1, sinal, diff[3], diff[2], diff[1],  diff[0]); // verifica se o numero eh 1 1111
 	and and3(n2, sinal, diff[3], diff[2], diff[1], w1); // verifica se o numero eh 1 1110
-	and and4(n3, sinal, diff[3], diff[2], w2, diff[0w2]); // verifica se o numero eh 1 1101
+	and and4(n3, sinal, diff[3], diff[2], w2, diff[0]); // verifica se o numero eh 1 1101
 	or or0(w4, n1, n2, n3); // se for ate 3 un
 	
 	or or1(w6, p1, w4); // se for ate 3 un
