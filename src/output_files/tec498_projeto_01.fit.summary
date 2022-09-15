@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Sep 14 21:35:04 2022
+Fitter Status : Successful - Wed Sep 14 22:04:09 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : tec498_projeto_01
-Top-level Entity Name : projeto
+Top-level Entity Name : comparador
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 6 / 240 ( 3 % )
-Total pins : 15 / 80 ( 19 % )
+Total logic elements : 3 / 240 ( 1 % )
+Total pins : 8 / 80 ( 10 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
