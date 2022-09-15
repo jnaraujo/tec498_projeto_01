@@ -65,22 +65,22 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 GND*                         : 1         :        :                   :         : 2         :                
 GND*                         : 2         :        :                   :         : 1         :                
-GND*                         : 3         :        :                   :         : 1         :                
-GND*                         : 4         :        :                   :         : 1         :                
-GND*                         : 5         :        :                   :         : 1         :                
-errada                       : 6         : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 7         :        :                   :         : 1         :                
-diff[2]                      : 8         : input  : 3.3-V LVTTL       :         : 1         : N              
+senha[0]                     : 3         : input  : 3.3-V LVTTL       :         : 1         : N              
+led2                         : 4         : output : 3.3-V LVTTL       :         : 1         : N              
+tentativa[2]                 : 5         : input  : 3.3-V LVTTL       :         : 1         : N              
+senha[2]                     : 6         : input  : 3.3-V LVTTL       :         : 1         : N              
+led0                         : 7         : output : 3.3-V LVTTL       :         : 1         : N              
+tentativa[0]                 : 8         : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-GND*                         : 12        :        :                   :         : 1         :                
+senha[1]                     : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
-GND*                         : 14        :        :                   :         : 1         :                
-GND*                         : 15        :        :                   :         : 1         :                
-diff[1]                      : 16        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 17        :        :                   :         : 1         :                
-GND*                         : 18        :        :                   :         : 1         :                
+tentativa[1]                 : 14        : input  : 3.3-V LVTTL       :         : 1         : N              
+display[6]                   : 15        : output : 3.3-V LVTTL       :         : 1         : N              
+display[2]                   : 16        : output : 3.3-V LVTTL       :         : 1         : N              
+led1                         : 17        : output : 3.3-V LVTTL       :         : 1         : N              
+display[0]                   : 18        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 19        :        :                   :         : 1         :                
 GND*                         : 20        :        :                   :         : 1         :                
 GND*                         : 21        :        :                   :         : 1         :                
@@ -101,19 +101,19 @@ GND*                         : 35        :        :                   :         
 GND*                         : 36        :        :                   :         : 1         :                
 GND*                         : 37        :        :                   :         : 1         :                
 GND*                         : 38        :        :                   :         : 1         :                
-GND*                         : 39        :        :                   :         : 1         :                
-diff[3]                      : 40        : input  : 3.3-V LVTTL       :         : 1         : N              
+display[7]                   : 39        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 40        :        :                   :         : 1         :                
 GND*                         : 41        :        :                   :         : 1         :                
 GND*                         : 42        :        :                   :         : 1         :                
 GND*                         : 43        :        :                   :         : 1         :                
 GND*                         : 44        :        :                   :         : 1         :                
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-GND*                         : 47        :        :                   :         : 1         :                
+display[3]                   : 47        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 48        :        :                   :         : 1         :                
-GND*                         : 49        :        :                   :         : 1         :                
+display[5]                   : 49        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 50        :        :                   :         : 1         :                
-GND*                         : 51        :        :                   :         : 1         :                
+display[4]                   : 51        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 52        :        :                   :         : 2         :                
 GND*                         : 53        :        :                   :         : 2         :                
 GND*                         : 54        :        :                   :         : 2         :                
@@ -131,16 +131,16 @@ GNDINT                       : 65        : gnd    :                   :         
 GND*                         : 66        :        :                   :         : 2         :                
 GND*                         : 67        :        :                   :         : 2         :                
 GND*                         : 68        :        :                   :         : 2         :                
-ate3                         : 69        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 69        :        :                   :         : 2         :                
 GND*                         : 70        :        :                   :         : 2         :                
 GND*                         : 71        :        :                   :         : 2         :                
 GND*                         : 72        :        :                   :         : 2         :                
-sinal                        : 73        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 73        :        :                   :         : 2         :                
 GND*                         : 74        :        :                   :         : 2         :                
 GND*                         : 75        :        :                   :         : 2         :                
-GND*                         : 76        :        :                   :         : 2         :                
+senha[3]                     : 76        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 77        :        :                   :         : 2         :                
-diff[0]                      : 78        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 78        :        :                   :         : 2         :                
 GNDIO                        : 79        : gnd    :                   :         :           :                
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
 GND*                         : 81        :        :                   :         : 2         :                
@@ -148,16 +148,16 @@ GND*                         : 82        :        :                   :         
 GND*                         : 83        :        :                   :         : 2         :                
 GND*                         : 84        :        :                   :         : 2         :                
 GND*                         : 85        :        :                   :         : 2         :                
-igual                        : 86        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 86        :        :                   :         : 2         :                
 GND*                         : 87        :        :                   :         : 2         :                
 GND*                         : 88        :        :                   :         : 2         :                
 GND*                         : 89        :        :                   :         : 2         :                
 GND*                         : 90        :        :                   :         : 2         :                
-GND*                         : 91        :        :                   :         : 2         :                
+display[1]                   : 91        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 92        :        :                   :         : 2         :                
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
-GND*                         : 95        :        :                   :         : 2         :                
+tentativa[3]                 : 95        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 96        :        :                   :         : 2         :                
 GND*                         : 97        :        :                   :         : 2         :                
 GND*                         : 98        :        :                   :         : 2         :                
