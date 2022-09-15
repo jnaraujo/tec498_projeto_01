@@ -1,5 +1,4 @@
 module comparador(diff, sinal, igual, ate3, errada);
-
 	/*
 		decimal	binario (sinal + 4 bits)
 		0			0 0000
@@ -22,7 +21,7 @@ module comparador(diff, sinal, igual, ate3, errada);
 	wire p1;
 	wire n1, n2, n3;
 	wire z0;
-	wire w0, w1, w3, w4;
+	wire w0, w1, w3, w4, w5, w6;
 	
 	not not0(notSinal, sinal);
 	
@@ -42,8 +41,10 @@ module comparador(diff, sinal, igual, ate3, errada);
 	and and2(n1, sinal, diff[3], diff[2], diff[1],  diff[0]); // verifica se o numero eh 11111
 	and and3(n2, sinal, diff[3], diff[2], diff[1], w1); // verifica se o numero eh 11110
 	and and4(n3, sinal, diff[3], diff[2], diff[1], w2); // verifica se o numero eh 11110
-	or or0(w4, p1, n1, n2, n3); // se for ate 3 un
+	or or0(w4, n1, n2, n3); // se for ate 3 un
 	
-	and and5(ate3, w4, notIgual); // ate 3 un & nao for igual
+	or or1(w6, p1, w4); // se for ate 3 un
+	
+	and and6(ate3, w6, notIgual); // ate 3 un & nao for igual
 	
 endmodule 
