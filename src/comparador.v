@@ -36,7 +36,6 @@ module comparador(diff, sinal, igual, ate3, errada);
 	and and1(p1, w0, notSinal); // bit 3 e 2 são 0 & o sinal é positivo
 	
 	// o numero é negativo e a diferença eh de ate 3 unidades
-	
 	not not1(w1, diff[0]);
 	not not2(w2, diff[1]);
 	not not3(notIgual, wIgual);
@@ -52,7 +51,6 @@ module comparador(diff, sinal, igual, ate3, errada);
 	and andAte3(ate3, wAte3, 1);
 	
 	// o valor está errado
-	
 	nor nor2(errada, wIgual, ate3);
 	
 endmodule 

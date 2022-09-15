@@ -30,16 +30,17 @@ module projeto(senha, tentativa, led0, led1, led2, segD, A, B, D, E, F, G, DP);
 		.errada(led2)
 	);
 	
-	display display0 (.diff(diferenca),
-							.sinal(subBOut),
-							.segD(segD),
-							.A(A),
-							.B(B),
-							.C(C),
-							.D(D),
-							.E(E),
-							.F(F),
-							.G(G),
-							.DP(DP)
+	display display0 (
+		.diff(diferenca),
+		.sinal(subBOut),
+		.segD(segD),
+		.A(A),
+		.B(B),
+		.C(C),
+		.D(D),
+		.E(E),
+		.F(F),
+		.G(G),
+		.DP(DP)
 	);
 endmodule 
