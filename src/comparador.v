@@ -28,8 +28,8 @@ module comparador(diff, sinal, igual, ate3, errada);
 	not not0(notSinal, sinal);
 	
 	nor nor0(z0, diff[0], diff[1], diff[2], diff[3]); // se todos forem 0, entao a tentativa é igual a senha
-	and and0(wIgual, z0, 1); // se for igual, define a saida igual como 1;
-	and andIgual(igual, wIgual, 1);
+	and and0(wIgual, z0); // se for igual, define a saida igual como 1;
+	and andIgual(igual, wIgual);
 	
 	// o numero é positivo e a diferença eh de ate 3 unidades
 	nor nor1(w0, diff[3], diff[2]); // se nem o bit 2 ou 3 forem 1
@@ -48,7 +48,7 @@ module comparador(diff, sinal, igual, ate3, errada);
 	or or1(w6, p1, w4); // se for ate 3 un
 	
 	and and6(wAte3, w6, notIgual); // ate 3 un & nao for igual
-	and andAte3(ate3, wAte3, 1);
+	and andAte3(ate3, wAte3);
 	
 	// o valor está errado
 	nor nor2(errada, wIgual, ate3);
