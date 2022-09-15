@@ -1,0 +1,31 @@
+/*
+		 A
+	 F		 B
+		 G
+	 E		 C
+ DP	 D
+*/
+module display(diff, sinal, segD, A, B, C, D, E, F, G, DP);
+	
+	// digito 0 - 0 em tudo
+	// digito 1 - 1 em B e C
+	// digito 2 - 1 em A, B, G, E, D
+	// digito 3 - 1 em A, B, G, C, D
+	// digito -1 - 1 em DP, B e C
+	// digito -2 - 1 em DP, A, B, G, E, D
+	// digito -3 - 1 em DP, A, B, G, C, D
+	
+	input [3:0] diff;
+	input sinal;
+	output segD, A, B, C, D, E, F, G, DP;
+	
+	wire w0Dg1, w1Dg1, w2Dg1;
+	
+	// # digito 1 - 0 0001
+	and and0Digito1 (w0Dg1, diff[0]);
+	nor nor0Digito1 (w1Dg1, diff[3], diff[2], diff[1]);
+	and and1Digito1 (w2Dg1, w0Dg0, w0Dg1);
+	and and2Digito1 (B, w2Dg1);
+	and and3Digito1 (C, w2Dg1);
+
+endmodule 
