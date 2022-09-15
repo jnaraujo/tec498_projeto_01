@@ -1,0 +1,3 @@
+module comparador(diferenca, sinal);
+
+endmodule 
