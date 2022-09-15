@@ -21,6 +21,11 @@ module projeto(senha, tentativa, led0, led1, led2, diferenca);
 						.B(tentativa)
 	);
 	
+	comparador comp0 (
+		.diff(diferenca),
+		.sinal(subBOut)
+	);
+	
 	
 	
 endmodule 
