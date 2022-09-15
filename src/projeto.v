@@ -13,6 +13,7 @@ module projeto(senha, tentativa, led0, led1, led2, display);
 	
 	// Define os fios
 	wire subBOut; // sinal da operação; 1 == negativo
+	wire [3:0] diferenca;
 	
 	subtrator sub0 (
 						.S(diferenca),
