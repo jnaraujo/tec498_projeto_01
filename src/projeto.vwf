@@ -21,6 +21,8 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +41,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
@@ -288,6 +292,16 @@ SIGNAL("segD")
 	PARENT = "";
 }
 
+SIGNAL("C")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("led0")
 {
 	NODE
@@ -497,6 +511,15 @@ TRANSITION_LIST("segD")
 	}
 }
 
+TRANSITION_LIST("C")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 80.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "senha";
@@ -644,7 +667,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "D";
+	CHANNEL = "C";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 15;
@@ -653,7 +676,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "E";
+	CHANNEL = "D";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 16;
@@ -662,7 +685,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "F";
+	CHANNEL = "E";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
@@ -671,7 +694,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "G";
+	CHANNEL = "F";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 18;
@@ -680,7 +703,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "DP";
+	CHANNEL = "G";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -689,16 +712,25 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "segD";
+	CHANNEL = "DP";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
 	TREE_LEVEL = 0;
 }
 
+DISPLAY_LINE
+{
+	CHANNEL = "segD";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+}
+
 TIME_BAR
 {
-	TIME = 880000;
+	TIME = 70000;
 	MASTER = TRUE;
 }
 ;
