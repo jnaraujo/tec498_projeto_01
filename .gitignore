@@ -1,2 +1,4 @@
 src/db/
 src/incremental_db/
+src/simulation
+src/output_files
