@@ -59,3 +59,4 @@ set_global_assignment -name VERILOG_FILE subtrator.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE subtrator.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE adder.vwf
 set_global_assignment -name VERILOG_FILE comparador.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE comparador.vwf

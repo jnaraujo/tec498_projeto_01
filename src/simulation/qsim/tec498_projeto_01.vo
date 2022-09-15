@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "09/14/2022 22:06:26"
+// DATE "09/14/2022 22:22:40"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -56,9 +56,9 @@ tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
 wire \nor0~0_combout ;
-wire \and5~0_combout ;
+wire \and6~0_combout ;
 wire \sinal~combout ;
-wire \and5~1_combout ;
+wire \and6~1_combout ;
 wire [3:0] \diff~combout ;
 
 
@@ -139,9 +139,9 @@ defparam \nor0~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X5_Y1_N4
-maxii_lcell \and5~0 (
+maxii_lcell \and6~0 (
 // Equation(s):
-// \and5~0_combout  = (\diff~combout [2] & (((\diff~combout [3]))))
+// \and6~0_combout  = (\diff~combout [2] & (((\diff~combout [3]))))
 
 	.clk(gnd),
 	.dataa(\diff~combout [2]),
@@ -160,18 +160,18 @@ maxii_lcell \and5~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\and5~0_combout ),
+	.combout(\and6~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \and5~0 .lut_mask = "a0a0";
-defparam \and5~0 .operation_mode = "normal";
-defparam \and5~0 .output_mode = "comb_only";
-defparam \and5~0 .register_cascade_mode = "off";
-defparam \and5~0 .sum_lutc_input = "datac";
-defparam \and5~0 .synch_mode = "off";
+defparam \and6~0 .lut_mask = "a0a0";
+defparam \and6~0 .operation_mode = "normal";
+defparam \and6~0 .output_mode = "comb_only";
+defparam \and6~0 .register_cascade_mode = "off";
+defparam \and6~0 .sum_lutc_input = "datac";
+defparam \and6~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -185,12 +185,12 @@ defparam \sinal~I .operation_mode = "input";
 // synopsys translate_on
 
 // Location: LC_X5_Y1_N6
-maxii_lcell \and5~1 (
+maxii_lcell \and6~1 (
 // Equation(s):
-// \and5~1_combout  = (\nor0~0_combout  & (((\and5~0_combout  & \diff~combout [1])) # (!\sinal~combout )))
+// \and6~1_combout  = (\nor0~0_combout  & (((\and6~0_combout  & \diff~combout [1])) # (!\sinal~combout )))
 
 	.clk(gnd),
-	.dataa(\and5~0_combout ),
+	.dataa(\and6~0_combout ),
 	.datab(\sinal~combout ),
 	.datac(\diff~combout [1]),
 	.datad(\nor0~0_combout ),
@@ -206,18 +206,18 @@ maxii_lcell \and5~1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\and5~1_combout ),
+	.combout(\and6~1_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \and5~1 .lut_mask = "b300";
-defparam \and5~1 .operation_mode = "normal";
-defparam \and5~1 .output_mode = "comb_only";
-defparam \and5~1 .register_cascade_mode = "off";
-defparam \and5~1 .sum_lutc_input = "datac";
-defparam \and5~1 .synch_mode = "off";
+defparam \and6~1 .lut_mask = "b300";
+defparam \and6~1 .operation_mode = "normal";
+defparam \and6~1 .output_mode = "comb_only";
+defparam \and6~1 .register_cascade_mode = "off";
+defparam \and6~1 .sum_lutc_input = "datac";
+defparam \and6~1 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
@@ -232,7 +232,7 @@ defparam \igual~I .operation_mode = "output";
 
 // Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \ate3~I (
-	.datain(\and5~1_combout ),
+	.datain(\and6~1_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(ate3));

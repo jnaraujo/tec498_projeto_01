@@ -3,7 +3,7 @@ $comment
 		vcd file tec498_projeto_01.msim.vcd -direction
 $end
 $date
-	Wed Sep 14 22:06:28 2022
+	Wed Sep 14 22:22:42 2022
 $end
 $version
 	ModelSim Version 2020.1
@@ -27,9 +27,9 @@ $var tri1 1 ) devclrn $end
 $var tri1 1 * devpor $end
 $var tri1 1 + devoe $end
 $var wire 1 , nor0~0_combout $end
-$var wire 1 - and5~0_combout $end
+$var wire 1 - and6~0_combout $end
 $var wire 1 . sinal~combout $end
-$var wire 1 / and5~1_combout $end
+$var wire 1 / and6~1_combout $end
 $var wire 1 0 diff~combout [3] $end
 $var wire 1 1 diff~combout [2] $end
 $var wire 1 2 diff~combout [1] $end
@@ -63,9 +63,11 @@ $end
 1"
 1.
 #10000
-b1 !
+b1000 !
+b1001 !
 0"
 13
+10
 0.
 1,
 1/
@@ -77,11 +79,13 @@ b1 !
 0/
 0#
 #20000
+b1011 !
 b11 !
 b10 !
 0"
 03
 12
+00
 0.
 1/
 1#
@@ -91,9 +95,11 @@ b10 !
 0/
 0#
 #30000
-b11 !
+b1010 !
+b1011 !
 0"
 13
+10
 0.
 1/
 1#
@@ -103,13 +109,15 @@ b11 !
 0/
 0#
 #40000
-b111 !
+b1111 !
+b1101 !
 b101 !
 b100 !
 0"
 03
 02
 11
+00
 0.
 1/
 1#
@@ -119,10 +127,13 @@ b100 !
 0/
 0#
 #50000
-b101 !
+b1100 !
+b1101 !
 0"
 13
+10
 0.
+1-
 1/
 1#
 #55000
@@ -131,13 +142,16 @@ b101 !
 0/
 0#
 #60000
+b1111 !
 b111 !
 b110 !
 0"
 03
 12
+00
 0.
 1/
+0-
 1#
 #65000
 1"
@@ -145,15 +159,16 @@ b110 !
 0/
 0#
 #70000
-b111 !
+b1110 !
+b1111 !
 0"
 13
+10
 0.
+1-
 1/
 1#
 #75000
 1"
 1.
-0/
-0#
 #80000

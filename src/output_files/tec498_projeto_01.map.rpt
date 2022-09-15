@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tec498_projeto_01
-Wed Sep 14 22:04:06 2022
+Wed Sep 14 22:22:13 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Sep 14 22:04:06 2022       ;
+; Analysis & Synthesis Status ; Successful - Wed Sep 14 22:22:13 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; tec498_projeto_01                           ;
 ; Top-level Entity Name       ; comparador                                  ;
@@ -214,7 +214,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 14 22:03:57 2022
+    Info: Processing started: Wed Sep 14 22:22:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tec498_projeto_01 -c tec498_projeto_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -228,22 +228,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file subtrat
     Info (12023): Found entity 1: subtrator File: Z:/Programming/faculdade/tec498_projeto_01/src/subtrator.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparador.v
     Info (12023): Found entity 1: comparador File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at comparador.v(39): created implicit net for "w2" File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at comparador.v(38): created implicit net for "w2" File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 38
 Info (12127): Elaborating entity "comparador" for the top level hierarchy
-Warning (10739): Verilog HDL warning at comparador.v(30): actual bit length 32 differs from formal bit length 1 File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 30
-Warning (10034): Output port "errada" at comparador.v(18) has no driver File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 18
+Warning (10739): Verilog HDL warning at comparador.v(29): actual bit length 32 differs from formal bit length 1 File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 29
+Warning (10034): Output port "errada" at comparador.v(17) has no driver File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 17
 Info (13014): Ignored 1 buffer(s)
     Info (13019): Ignored 1 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "errada" is stuck at GND File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 18
+    Warning (13410): Pin "errada" is stuck at GND File: Z:/Programming/faculdade/tec498_projeto_01/src/comparador.v Line: 17
 Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4702 megabytes
-    Info: Processing ended: Wed Sep 14 22:04:06 2022
+    Info: Processing ended: Wed Sep 14 22:22:13 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:23
 
 

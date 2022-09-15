@@ -1,5 +1,5 @@
 Fitter report for tec498_projeto_01
-Wed Sep 14 22:04:09 2022
+Wed Sep 14 22:22:16 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Wed Sep 14 22:04:09 2022       ;
+; Fitter Status         ; Successful - Wed Sep 14 22:22:16 2022       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; tec498_projeto_01                           ;
 ; Top-level Entity Name ; comparador                                  ;
@@ -530,10 +530,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file Z:/Programming/faculdade/tec498_projeto_01/src/output_files/tec498_projeto_01.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5709 megabytes
-    Info: Processing ended: Wed Sep 14 22:04:09 2022
+    Info: Peak virtual memory: 5711 megabytes
+    Info: Processing ended: Wed Sep 14 22:22:16 2022
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
