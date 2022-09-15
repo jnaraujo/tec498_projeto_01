@@ -24,7 +24,10 @@ module projeto(senha, tentativa, led0, led1, led2, display);
 	
 	comparador comp0 (
 		.diff(diferenca),
-		.sinal(subBOut)
+		.sinal(subBOut),
+		.igual(led0),
+		.ate3(led1),
+		.errada(led2)
 	);
 	
 	
