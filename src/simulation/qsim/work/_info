@@ -56,23 +56,23 @@ R6
 R9
 R10
 vcomparador
-Z11 !s110 1663204961
+Z11 !s110 1663248366
 !i10b 1
-!s100 f?BWB3jL>LB4F3h=RVi;i0
+!s100 26ZMl5VQbii@V6iODSEaC3
 R1
-IM0DCKocZfPz7mjE@L[PN02
+IHYLHdFgaLFigYfORLiPO40
 R2
 R0
-w1663204960
+w1663248365
 R3
 R4
-!i122 18
-L0 32 222
+!i122 30
+L0 32 259
 R5
 r1
 !s85 0
 31
-Z12 !s108 1663204961.000000
+Z12 !s108 1663248366.000000
 R7
 R8
 !i113 1
@@ -81,23 +81,23 @@ R10
 vcomparador_vlg_vec_tst
 R11
 !i10b 1
-!s100 7[AD;l@RCS4RV`1a=`8z@0
+!s100 Fcjob`dH>i_Ebjbi;<MLY0
 R1
-I_Qh8MY^9i5hk<k9dYK;[=2
+Io2VXA<HWSTlDgW`bOV@`b0
 R2
 R0
-w1663204959
-8comparador.vwf.vt
-Fcomparador.vwf.vt
-!i122 19
-L0 30 60
+w1663248364
+8comparadorNegativo.vwf.vt
+FcomparadorNegativo.vwf.vt
+!i122 31
+L0 30 58
 R5
 r1
 !s85 0
 31
 R12
-!s107 comparador.vwf.vt|
-!s90 -work|work|comparador.vwf.vt|
+!s107 comparadorNegativo.vwf.vt|
+!s90 -work|work|comparadorNegativo.vwf.vt|
 !i113 1
 R9
 R10
