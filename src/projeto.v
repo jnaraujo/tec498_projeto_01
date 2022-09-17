@@ -1,4 +1,4 @@
-module projeto(senha, tentativa, led0, led1, led2, segD, A, B, C, D, E, F, G, DP);
+module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A, B, C, D, E, F, G, DP);
 	// led0: quando o cofre é aberto
 	// led1: quando a senha é maior ou menor em ate 3 unidades
 	// led2: se a senha estiver errada
@@ -9,7 +9,8 @@ module projeto(senha, tentativa, led0, led1, led2, segD, A, B, C, D, E, F, G, DP
 	
 	// Define as saídas do circuito
 	output led0, led1, led2;
-	output segD, A, B, C, D, E, F, G, DP;
+	output A, B, C, D, E, F, G, DP;
+	output segD1=0, segD2=1, segD3=1, segD4=1;
 	
 	// Define os fios
 	wire subBOut; // sinal da operação; 1 == negativo
@@ -33,7 +34,6 @@ module projeto(senha, tentativa, led0, led1, led2, segD, A, B, C, D, E, F, G, DP
 	display display0 (
 		.diff(diferenca),
 		.sinal(subBOut),
-		.segD(segD),
 		.A(A),
 		.B(B),
 		.C(C),
