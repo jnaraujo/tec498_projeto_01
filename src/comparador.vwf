@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
@@ -71,7 +73,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 80.0;
+	DATA_DURATION = 160.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -173,7 +175,7 @@ TRANSITION_LIST("ate3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -184,7 +186,7 @@ TRANSITION_LIST("diff[3]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 1;
+			REPEAT = 2;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -198,7 +200,7 @@ TRANSITION_LIST("diff[2]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 4;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -212,7 +214,7 @@ TRANSITION_LIST("diff[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 4;
+			REPEAT = 8;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -226,7 +228,7 @@ TRANSITION_LIST("diff[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 8;
+			REPEAT = 16;
 			LEVEL 0 FOR 5.0;
 			LEVEL 1 FOR 5.0;
 		}
@@ -238,7 +240,7 @@ TRANSITION_LIST("errada")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -247,7 +249,7 @@ TRANSITION_LIST("igual")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -256,14 +258,19 @@ TRANSITION_LIST("sinal")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
 	}
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "diff";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
@@ -321,7 +328,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ate3";
+	CHANNEL = "igual";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -330,7 +337,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "errada";
+	CHANNEL = "ate3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -339,7 +346,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "igual";
+	CHANNEL = "errada";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -348,7 +355,7 @@ DISPLAY_LINE
 
 TIME_BAR
 {
-	TIME = 10000;
+	TIME = 0;
 	MASTER = TRUE;
 }
 ;
