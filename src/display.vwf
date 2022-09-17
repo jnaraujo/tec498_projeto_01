@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -69,7 +71,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 80.0;
+	DATA_DURATION = 160.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -231,7 +233,7 @@ TRANSITION_LIST("A")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -240,7 +242,7 @@ TRANSITION_LIST("B")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -249,7 +251,7 @@ TRANSITION_LIST("C")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -258,7 +260,7 @@ TRANSITION_LIST("D")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -267,7 +269,7 @@ TRANSITION_LIST("DP")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -276,7 +278,7 @@ TRANSITION_LIST("E")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -285,7 +287,7 @@ TRANSITION_LIST("F")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -294,7 +296,7 @@ TRANSITION_LIST("G")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -305,7 +307,7 @@ TRANSITION_LIST("diff[3]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 1;
+			REPEAT = 2;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -319,7 +321,7 @@ TRANSITION_LIST("diff[2]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 4;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -333,7 +335,7 @@ TRANSITION_LIST("diff[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 4;
+			REPEAT = 8;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -347,7 +349,7 @@ TRANSITION_LIST("diff[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 8;
+			REPEAT = 16;
 			LEVEL 0 FOR 5.0;
 			LEVEL 1 FOR 5.0;
 		}
@@ -359,7 +361,7 @@ TRANSITION_LIST("segD")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 80.0;
+		LEVEL X FOR 160.0;
 	}
 }
 
@@ -368,58 +370,13 @@ TRANSITION_LIST("sinal")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
 	}
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "diff";
-	EXPAND_STATUS = EXPANDED;
-	RADIX = Binary;
-	TREE_INDEX = 0;
-	TREE_LEVEL = 0;
-	CHILDREN = 1, 2, 3, 4;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "diff[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 1;
-	TREE_LEVEL = 1;
-	PARENT = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "diff[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 2;
-	TREE_LEVEL = 1;
-	PARENT = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "diff[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 3;
-	TREE_LEVEL = 1;
-	PARENT = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "diff[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 4;
-	TREE_LEVEL = 1;
-	PARENT = 0;
 }
 
 DISPLAY_LINE
@@ -427,8 +384,58 @@ DISPLAY_LINE
 	CHANNEL = "sinal";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 5;
+	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "diff";
+	EXPAND_STATUS = EXPANDED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+	CHILDREN = 2, 3, 4, 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "diff[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "diff[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "diff[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "diff[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 1;
 }
 
 DISPLAY_LINE
