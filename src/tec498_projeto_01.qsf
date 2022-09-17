@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY adder_1bit
+set_global_assignment -name TOP_LEVEL_ENTITY projeto
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:39:57  SEPTEMBER 14, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -81,8 +81,11 @@ set_location_assignment PIN_98 -to D
 set_location_assignment PIN_100 -to E
 set_location_assignment PIN_92 -to F
 set_location_assignment PIN_39 -to G
-set_location_assignment PIN_88 -to segD
 set_location_assignment PIN_72 -to led0
 set_location_assignment PIN_74 -to led1
 set_location_assignment PIN_86 -to led2
 set_global_assignment -name VECTOR_WAVEFORM_FILE adder1bit.vwf
+set_location_assignment PIN_88 -to segD1
+set_location_assignment PIN_66 -to segD2
+set_location_assignment PIN_68 -to segD3
+set_location_assignment PIN_37 -to segD4
