@@ -23,6 +23,7 @@ quit -f
 
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -41,6 +42,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 
@@ -282,7 +284,7 @@ SIGNAL("G")
 	PARENT = "";
 }
 
-SIGNAL("segD")
+SIGNAL("C")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -292,7 +294,37 @@ SIGNAL("segD")
 	PARENT = "";
 }
 
-SIGNAL("C")
+SIGNAL("segD1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("segD2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("segD3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("segD4")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -502,7 +534,7 @@ TRANSITION_LIST("G")
 	}
 }
 
-TRANSITION_LIST("segD")
+TRANSITION_LIST("C")
 {
 	NODE
 	{
@@ -511,7 +543,34 @@ TRANSITION_LIST("segD")
 	}
 }
 
-TRANSITION_LIST("C")
+TRANSITION_LIST("segD1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 80.0;
+	}
+}
+
+TRANSITION_LIST("segD2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 80.0;
+	}
+}
+
+TRANSITION_LIST("segD3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 80.0;
+	}
+}
+
+TRANSITION_LIST("segD4")
 {
 	NODE
 	{
@@ -721,10 +780,37 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "segD";
+	CHANNEL = "segD1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "segD2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "segD3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "segD4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 24;
 	TREE_LEVEL = 0;
 }
 
