@@ -15,11 +15,6 @@ module display(diff, sinal, A, B, C, D, E, F, G, DP);
 	not not3(NOT_DIFF3, diff[3]);
 	not not4(NOT_SINAL, sinal);
 
-	// (c AND d AND e) OR (c AND NOT d AND NOT e) OR ( NOT c AND NOT d AND e)
-	
-	// 	 A 			B			 C			D			E
-	// sinal	diff3	 diff2	diff1	diff0
-
 	// Segmento A
 	and andA0 (SINAL_AND_NOT_DIFF2, sinal, NOT_DIFF2);
 	and andA1 (NOT_SINAL_AND_DIFF3, NOT_SINAL, diff[3]);
@@ -62,7 +57,11 @@ module display(diff, sinal, A, B, C, D, E, F, G, DP);
 	
 	or orG0 (G, SINAL_AND_NOT_DIFF2, NOT_SINAL_AND_DIFF3, NOT_DIFF3_AND_DIFF2, DIFF2_AND_DIFF1_AND_DIFF0, NOT_DIFF2_AND_NOT_DIFF1, NOT_DIFF1_AND_NOT_DIFF0);
 	
+
+	// 	 A 			B			 C			D			E
+	// sinal	diff3	 diff2	diff1	diff0
+
 	// Segmento DP
-	or orDP0 (DP, sinal, diff[3], diff[2]);
+	or orDP0 (DP, NOT_SINAL, NOT_DIFF3, NOT_DIFF2, NOT_DIFF1_AND_NOT_DIFF0);
 	
 endmodule 
