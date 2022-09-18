@@ -17,10 +17,10 @@ module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A
 	wire [3:0] diferenca;
 	
 	subtrator sub0 (
-						.S(diferenca),
-						.Bout(subBOut),
-						.A(senha),
-						.B(tentativa)
+		.S(diferenca),
+		.Bout(subBOut),
+		.A(senha),
+		.B(tentativa)
 	);
 	
 	comparador comp0 (
