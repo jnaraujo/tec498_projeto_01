@@ -1,3 +1,6 @@
+/*
+	Módulo principal do projeto.
+*/
 module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A, B, C, D, E, F, G, DP);
 	// led0: quando o cofre é aberto
 	// led1: quando a senha é maior ou menor em ate 3 unidades
@@ -16,6 +19,7 @@ module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A
 	wire subBOut; // sinal da operação; 1 == negativo
 	wire [3:0] diferenca;
 	
+	// modulo de subtração
 	subtrator sub0 (
 		.S(diferenca),
 		.Bout(subBOut),
@@ -23,6 +27,7 @@ module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A
 		.B(tentativa)
 	);
 	
+	// modulo do comparador
 	comparador comp0 (
 		.diff(diferenca),
 		.sinal(subBOut),
@@ -31,6 +36,7 @@ module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A
 		.errada(led2)
 	);
 	
+	// modulo do display
 	display display0 (
 		.diff(diferenca),
 		.sinal(subBOut),

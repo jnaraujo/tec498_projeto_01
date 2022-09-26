@@ -1,14 +1,22 @@
 
+/*
+	Módulo do display.
+	Ele é responsável por mostrar as informações na tela.
+*/
+
 module display(diff, sinal, A, B, C, D, E, F, G, DP);
-	
+	// define as entradas
 	input [3:0] diff;
 	input sinal;
+
+	// define as saídas
 	output A, B, C, D, E, F, G, DP;
 
-	
+	// define os fios
 	wire SINAL_AND_NOT_DIFF2, DIFF2_AND_NOT_DIFF1_AND_NOT_DIFF0, DIFF2_AND_DIFF1_AND_DIFF0, NOT_SINAL_AND_DIFF3, NOT_DIFF3_AND_DIFF2, NOT_DIFF_2_AND_NOT_DIFF1_AND_DIFF0, DIFF2_AND_NOT_DIFF0, DIFF1_AND_NOT_DIFF0, SINAL_AND_NOT_DIFF3, SINAL_AND_NOT_DIFF1, NOT_SINAL_AND_DIFF2, DIFF3_AND_NOT_DIFF2, NOT_DIFF1_AND_NOT_DIFF0, NOT_DIFF2_AND_NOT_DIFF1, DIFF2_AND_DIFF1_DIFF0;
-
 	wire NOT_DIFF0, NOT_DIFF1, NOT_DIFF2, NOT_DIFF3, NOT_SINAL;
+
+
 	not not0(NOT_DIFF0, diff[0]);
 	not not1(NOT_DIFF1, diff[1]);
 	not not2(NOT_DIFF2, diff[2]);
@@ -51,15 +59,10 @@ module display(diff, sinal, A, B, C, D, E, F, G, DP);
 	or orF0 (F, sinal, diff[3], diff[2], diff[1], diff[0]);
 
 	// Segmento G
-
 	and andG1 (NOT_DIFF1_AND_NOT_DIFF0, NOT_DIFF1, NOT_DIFF0);
 	and andG2 (NOT_DIFF2_AND_NOT_DIFF1, NOT_DIFF2, NOT_DIFF1);
 	
 	or orG0 (G, SINAL_AND_NOT_DIFF2, NOT_SINAL_AND_DIFF3, NOT_DIFF3_AND_DIFF2, DIFF2_AND_DIFF1_AND_DIFF0, NOT_DIFF2_AND_NOT_DIFF1, NOT_DIFF1_AND_NOT_DIFF0);
-	
-
-	// 	 A 			B			 C			D			E
-	// sinal	diff3	 diff2	diff1	diff0
 
 	// Segmento DP
 	or orDP0 (DP, NOT_SINAL, NOT_DIFF3, NOT_DIFF2, NOT_DIFF1_AND_NOT_DIFF0);

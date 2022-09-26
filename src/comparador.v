@@ -1,13 +1,25 @@
+/*
+	Módulo de comparação.
+	Ele recebe 4 bits de entrada (diff) e e 1 bot de sinal (sinal).
+	Se a diferença (em base 10) for 0, igual é 1.
+	Se a diferença (em base 10) for de -3 ate 3(b), ate3 é 1.
+	Se for qualquer outra diferença, errada é 1.
+*/
+
 module comparador(diff, sinal, igual, ate3, errada);
+	// Define as entradas
 	input [3:0] diff;
 	input sinal; // 1 == NEGATIVO
 	
+	// Define as saídas
 	output igual, ate3, errada;
 
+	// Define os fios
 	wire SINAL_AND_DIFF3_AND_DIFF2_AND_DIFF1, SINAL_AND_DIFF3_AND_DIFF2_AND_DIFF0, NOT_SINAL_AND_NOT_DIFF3_AND_NOT_DIFF2_AND_DIFF1, NOT_SINAL_AND_NOT_DIFF3_AND_NOT_DIFF2_AND_DIFF0;
 	wire SINAL_AND_NOT_DIFF2, NOT_SINAL_AND_DIFF3, NOT_DIFF3_AND_DIFF2, DIFF2_AND_NOT_DIFF1_AND_NOT_DIFF0;
 
 	wire NOT_DIFF0, NOT_DIFF1, NOT_DIFF2, NOT_DIFF3, NOT_SINAL;
+
 	not not0(NOT_DIFF0, diff[0]);
 	not not1(NOT_DIFF1, diff[1]);
 	not not2(NOT_DIFF2, diff[2]);

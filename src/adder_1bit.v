@@ -10,8 +10,10 @@ module adder_1bit( S, Cout, A, B, Cin);
 	wire w0;
  
    xor xor0 (A_XOR_B, A, B);
+   xor xor1 (S, A_XOR_B, Cin);
+
    and and0(A_AND_B, A, B);
    and and1(w0, A_XOR_B, Cin);
+   
    or or0(Cout, A_AND_B, w0);
-   xor xor1 (S, A_XOR_B, Cin);
 endmodule 
