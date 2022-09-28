@@ -20,7 +20,7 @@ module projeto(senha, tentativa, led0, led1, led2, segD1, segD2, segD3, segD4, A
 	wire [3:0] diferenca;
 	
 	// modulo de subtração
-	subtrator sub0 (
+	moduloDeSubtracao sub0 (
 		.S(diferenca),
 		.Bout(subBOut),
 		.A(senha),
