@@ -19,6 +19,7 @@ module moduloDeSubtracao(S, Bout, A, B);
 	wire h0, h1, h2;
 	wire [3:0] notB;
 	wire wCout;
+	wire adderCIn = 1;
 	
 	// inverte os bits de B
 	not not0 (notB[0], B[0]);
@@ -28,5 +29,5 @@ module moduloDeSubtracao(S, Bout, A, B);
 
 	not not4(Bout, wCout); // inverte o cout
 	
-	adder adder0 (S, wCout, A, notB, 1);
+	adder adder0 (S, wCout, A, notB, adderCIn);
 endmodule 
